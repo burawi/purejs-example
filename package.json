@@ -1,0 +1,29 @@
+{
+  "name": "purejs-example",
+  "version": "0.0.1",
+  "description": "a front end app example using only pure js api's with no frameworks",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node_modules/.bin/live-server --port=3000 --entry-file=index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/burawi/purejs-example.git"
+  },
+  "keywords": [
+    "purejs",
+    "native",
+    "api",
+    "js"
+  ],
+  "author": "Abu Rawi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/burawi/purejs-example/issues"
+  },
+  "homepage": "https://github.com/burawi/purejs-example#readme",
+  "dependencies": {
+    "live-server": "^1.2.1"
+  }
+}
