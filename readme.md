@@ -17,4 +17,4 @@ npm i
 npm start
 ```
 
-PS: If you're using VSCode, you can install **ES6 String HTML** extension (`hjb2012.vscode-es6-string-html`), in order to highlight html in js srings.
+PS: If you're using VSCode, you can install **ES6 String HTML** extension (`hjb2012.vscode-es6-string-html`), in order to highlight html in js strings.
