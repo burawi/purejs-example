@@ -1,0 +1,7 @@
+router-link {
+  color: blue;
+}
+
+router-link:hover {
+  text-decoration: underline;
+}
