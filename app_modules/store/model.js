@@ -3,9 +3,9 @@ export default class Store {
     // normally should fetch for result from server
     // but for demo purpose i will return a plain object
     return [
-      { id: "123", name: 'maghaza al baraka' },
-      { id: "124", name: 'techoli store' },
-      { id: "125", name: 'monoprix' }
+      { id: "123", name: '7 Eleven' },
+      { id: "124", name: 'IKEA' },
+      { id: "125", name: 'Walmart' }
     ]
   }
 
