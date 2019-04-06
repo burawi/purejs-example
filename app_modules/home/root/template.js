@@ -1,7 +1,4 @@
 export default /*html*/`
-<style>
-  html {
-    background-color: red;
-  }
-</style>
+<h1>Modern JS is awesome</h1>
+<p>You don't need a JS framework anymore</p>
 `
