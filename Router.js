@@ -17,7 +17,13 @@ export class Router {
     newContent.params = this.getPageParams(page.route, route);
     container.parentNode.replaceChild(newContent, container);
     this.setContainer(newContent);
-    window.history.pushState({}, route, `${window.location.origin}${route}`);
+    document.dispatchEvent(this.pageLoaded(page.component));
+  }
+
+  static pageLoaded(component) {
+    return new CustomEvent("page-loaded", {
+      detail: { component }
+    });
   }
 
   static setContainer(el) {
@@ -41,17 +47,16 @@ window.onpopstate = () => {
   Router.open(window.location.pathname);
 }
 
-class RouterLink extends HTMLElement {
+class RouterLink extends HTMLAnchorElement {
   constructor() {
     super();
-    this.addEventListener("click", () => {
-      Router.open(this.getAttribute("to"));
+    this.addEventListener("click", (e) => {
+      const route = this.getAttribute("href")
+      Router.open(route);
+      window.history.pushState({}, route, `${window.location.origin}${route}`);
+      e.preventDefault();
     });
-    let style = {
-      cursor: "pointer"
-    };
-    Object.assign(this.style, style);
   }
 }
 
-customElements.define('router-link', RouterLink);
+customElements.define('router-link', RouterLink, { extends: "a" });

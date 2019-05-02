@@ -9,7 +9,7 @@ export default data => {
     data.list.map(item => /*html*/`
         <tr>
           <td>
-            <router-link to='/store/${item.id}'>${item.name}</router-link>
+            <a is="router-link" href='/store/${item.id}'>${item.name}</a>
           </td>
         </tr>
         `
